@@ -6,7 +6,8 @@ __pycache__/
 .Python
 build/
 develop-eggs/
-dist/
+dist/*
+!dist/SignalLab.exe
 downloads/
 eggs/
 .eggs/
@@ -27,7 +28,6 @@ env/
 node_modules/
 .next/
 out/
-dist/
 
 # IDE
 .vscode/
