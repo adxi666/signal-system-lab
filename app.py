@@ -113,8 +113,8 @@ def api_lti(req: LTIRequest):
     )
 
 # 前端路由 catch-all：优先匹配静态文件，其次 HTML 页面，最后 SPA 回退
-@app.get("/{full_path:path}")
-async def serve_frontend(full_path: str):
+@app.api_route("/{full_path:path}", methods=["GET", "HEAD"])
+async def serve_frontend(full_path: str, request: Request):
     if not frontend_path.exists():
         return {
             "name": "Signal Lab API",
