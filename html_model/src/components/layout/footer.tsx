@@ -1,9 +1,7 @@
 import Link from 'next/link'
 
-import FacebookIcon from '@/assets/svg/facebook-icon'
-import InstagramIcon from '@/assets/svg/instagram-icon'
-import TwitterIcon from '@/assets/svg/twitter-icon'
-import YoutubeIcon from '@/assets/svg/youtube-icon'
+import BilibiliIcon from '@/assets/svg/bilibili-icon'
+import GithubIcon from '@/assets/svg/github-icon'
 
 import { Separator } from '@/components/ui/separator'
 
@@ -40,17 +38,21 @@ const Footer = () => {
         </div>
 
         <div className='flex items-center gap-4'>
-          <Link href='#' className='text-muted-foreground hover:text-foreground'>
-            <FacebookIcon className='size-5' />
+          <Link
+            href='https://space.bilibili.com/506461796?spm_id_from=333.1365.0.0'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='text-muted-foreground hover:text-foreground'
+          >
+            <BilibiliIcon className='size-5' />
           </Link>
-          <Link href='#' className='text-muted-foreground hover:text-foreground'>
-            <InstagramIcon className='size-5' />
-          </Link>
-          <Link href='#' className='text-muted-foreground hover:text-foreground'>
-            <TwitterIcon className='size-5' />
-          </Link>
-          <Link href='#' className='text-muted-foreground hover:text-foreground'>
-            <YoutubeIcon className='size-5' />
+          <Link
+            href='https://github.com/adxi666/signal-system-lab'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='text-muted-foreground hover:text-foreground'
+          >
+            <GithubIcon className='size-5' />
           </Link>
         </div>
       </div>
@@ -64,6 +66,7 @@ const Footer = () => {
             <Link href='/#' className='hover:underline'>
               Signal Lab
             </Link>
+            {' · '}大葱匠心制作喵
           </span>
           <span> · 信号与系统仿真实验室</span>
         </p>

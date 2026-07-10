@@ -1,6 +1,5 @@
 import type { ReactNode } from 'react'
 
-import { Inter, Source_Serif_4, IBM_Plex_Mono } from 'next/font/google'
 import type { Metadata } from 'next'
 
 import { ThemeProvider } from '@/components/theme-provider'
@@ -9,22 +8,6 @@ import { TooltipProvider } from '@/components/ui/tooltip'
 import { cn } from '@/lib/utils'
 
 import './globals.css'
-
-const inter = Inter({
-  variable: '--font-inter',
-  subsets: ['latin']
-})
-
-const sourceSerif4 = Source_Serif_4({
-  variable: '--font-source-serif-4',
-  subsets: ['latin']
-})
-
-const ibmPlexMono = IBM_Plex_Mono({
-  variable: '--font-ibm-plex-mono',
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700']
-})
 
 export const metadata: Metadata = {
   title: {
@@ -109,16 +92,7 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: Readonly<{ children: ReactNode }>) => {
   return (
-    <html
-      lang='zh-CN'
-      className={cn(
-        inter.variable,
-        sourceSerif4.variable,
-        ibmPlexMono.variable,
-        'flex min-h-full w-full scroll-smooth'
-      )}
-      suppressHydrationWarning
-    >
+    <html lang='zh-CN' className='flex min-h-full w-full scroll-smooth' suppressHydrationWarning>
       <body className='flex min-h-full w-full flex-auto flex-col'>
         <ThemeProvider attribute='class' enableSystem={false} disableTransitionOnChange>
           <TooltipProvider>{children}</TooltipProvider>
